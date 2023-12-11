@@ -202,6 +202,12 @@ typedef enum {
     CO_EMC_ADDITIONAL_FUNC = 0xF000U,
     /** 0xFFxx, Device specific */
     CO_EMC_DEVICE_SPECIFIC = 0xFF00U,
+	/** 0x30D0, Device specific Inhibit Operation 12496*/
+	CO_EMC_DEVICE_SPECIFIC_INHIBIT = 0x30D0U,
+	/** 0x30D1, Device specific Limp-home 12497*/
+	CO_EMC_DEVICE_SPECIFIC_LIMP = 0x30D1U,
+	/** 0x30D2, Device specific Immediate Shutdown 12498*/
+	CO_EMC_DEVICE_SPECIFIC_SHUTDOWN = 0x30D2U,
 
     /** 0x2310, DS401, Current at outputs too high (overload) */
     CO_EMC401_OUT_CUR_HI = 0x2310U,
