@@ -32,8 +32,7 @@
 
 /* default configuration, see CO_config.h */
 #ifndef CO_CONFIG_NMT
-#define CO_CONFIG_NMT (CO_CONFIG_GLOBAL_FLAG_CALLBACK_PRE | \
-                       CO_CONFIG_GLOBAL_FLAG_TIMERNEXT)
+#define CO_CONFIG_NMT (CO_CONFIG_NMT_CALLBACK_CHANGE | CO_CONFIG_NMT_MASTER | CO_CONFIG_GLOBAL_FLAG_CALLBACK_PRE | CO_CONFIG_GLOBAL_FLAG_TIMERNEXT)
 #endif
 
 #ifdef __cplusplus
@@ -331,7 +330,7 @@ static inline CO_NMT_internalState_t CO_NMT_getInternalState(CO_NMT_t *NMT) {
 static inline void CO_NMT_sendInternalCommand(CO_NMT_t *NMT,
                                               CO_NMT_command_t command)
 {
-    if (NMT != NULL) NMT->internalCommand = command;
+    if (NMT != NULL) { NMT->internalCommand = command; }
 }
 
 
